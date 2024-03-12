@@ -1,0 +1,11 @@
+button{
+    background-color: yellowgreen;
+}
+
+button:hover{
+    background-color: yellowgreen;
+}
+
+img{
+    width: 100%;
+}

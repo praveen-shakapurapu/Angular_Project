@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cloneProject'`, () => {
+  it(`should have as title 'Angular_clone'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cloneProject');
+    expect(app.title).toEqual('Angular_clone');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('cloneProject app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Angular_clone app is running!');
   });
 });

@@ -1,0 +1,26 @@
+<div class="contain-fluid mt-5 p-5">
+    <form [formGroup]="searcForm" (ngSubmit)="submitForm()">
+        <div class="row">
+            <div class="mb-3 col-lg-10">
+                <input type="text" class="form-control"  formControlName="movieName" placeholder="Search Movies Here....">
+              </div>
+              <div class="col-lg-2">
+                <button class="btn btn-outline-primary">Search</button>
+              </div>
+        </div>
+    </form>
+
+    <div class="row mt-5">
+      <div class="col-lg-4" *ngFor="let sdata of searchResult">
+        <div class="row">
+          <div class="col-lg-3 mt-3 mb-3">
+            <img src="https://image.tmdb.org/t/p/original/{{ sdata.poster_path }}" [routerLink]="['/movieDetails',sdata.id]">
+          </div>
+          <div class="col-lg-9 mt-4 mb-4">
+            <h5>{{sdata.original_title}}</h5>
+            <p>{{sdata.overview}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
